@@ -6,14 +6,10 @@ const port = 3000
 const input = [];
 router.post('/', function(req, res) {
 const body = req.body
-// body.id = uuid.v4();
-//body.id = new Date().getTime()
   body.id = new Date().valueOf();
 input.push(body);
     res.send(input)
-
 });
-
 
 
 router.get('/:id',(req, res) => {

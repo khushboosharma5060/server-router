@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router()
-var uuid = require('uuid');
+// var uuid = require('uuid');
 
 
 
@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
 
 router.post('/', function (req, res) {
   const body = req.body;
-  body.id = uuid.v4()
+//   body.id = uuid.v4()
   body.id = new Date().valueOf()
   output.push(body)
   res.send('added')
@@ -44,8 +44,5 @@ router.delete('/:id', function(req, res) {
     res.send('deleted')
 });
 
-module.exports = router
 
-
-
-
+module.exports = router;
